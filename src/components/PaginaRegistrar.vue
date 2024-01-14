@@ -20,23 +20,54 @@
                   </ul>
 
                   <!-- Tu formulario aquí -->
-                  <form action="" method="post" enctype="multipart/form-data">
+                  
                     <!-- ... Campos del formulario ... -->
-                    <button type="submit" class="btn btn-success">Enviar</button>
-                  </form>
-                  <br>
-                  <form action="" method="post">
-                    <button type="submit" class="btn btn-success">Volver</button>
-                  </form>
+                    <div class="card-body">
+                                    <form action="Registrar_Producto.php" method="post" enctype="multipart/form-data">
+                                        <br>
+                                        Nombre Del Producto:
+                                        <br>
+                                        <input type="text" name="Producto" id="" class="form-control">
+                                        <br>
+                                        Marca Del Producto:
+                                        <br>
+                                        <input type="text" name="Marca" id="" class="form-control">
+                                        <br>
+                                        Fecha Del Producto:
+                                        <br>
+                                        <input type="date" name="Fecha" id="" class="form-control">
+                                        <br>
+                                        Selecciona Imagen:
+                                        <input type="file" name="Archivo" class="form-control" id="">
+                                        <br>
+                                        Precio Del  Producto:
+                                        <input type="text" name="Precio" class="form-control" id="">
+                                        <br>
+                                        <input type="submit" value="Registrar Producto" class="btn btn-warning">
+                                        <br>
+                                        
+                                    </form>
+                                    <br>
+                                    <form action="./index.php">
+                                            <input type="submit" value="Volver" class="btn btn-success">
+                                        </form>
+                                        <br>
+                                        <button type="submit" class="btn btn-success">Enviar</button>
+                                </div>
+                                <div class="card-footer text-muted">
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
                 </div>
                 <div class="card-footer text-muted"></div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </template>
 
 <script>
