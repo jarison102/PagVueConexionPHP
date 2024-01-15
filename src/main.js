@@ -1,5 +1,6 @@
 import { createApp } from 'vue';
 import App from './App.vue';
+import App2 from './components/PaginaRegistrarProducto.vue';
 import { createRouter, createWebHistory } from 'vue-router'; // Mueve la importación aquí
 import 'bootstrap/dist/css/bootstrap.min.css'; //Importacion de bootstrap
 import 'bootstrap-icons/font/bootstrap-icons.css';//Importacion de bootstrap para iconos
@@ -10,6 +11,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';//Importacion de bootstrap par
 // Importa el componente con el nuevo nombre
 
 import PaginaRegistrar from './components/PaginaRegistrar.vue';
+import PaginaRegistrarProducto from './components/PaginaRegistrarProducto.vue';
 
 
 
@@ -19,46 +21,28 @@ import PaginaRegistrar from './components/PaginaRegistrar.vue';
 const router = createRouter({
     history: createWebHistory(),
     routes: [
-      { path: '/pagina', component: PaginaRegistrar },// Utiliza el nuevo nombre aquí
+      { path: '/pagina', component: PaginaRegistrar },
+      { path: '/paginaP', component: PaginaRegistrarProducto },// Utiliza el nuevo nombre aquí
 
     ],
   });
 
 // Crea la instancia de la aplicación
 const app = createApp(App);
+const pag = createApp(App2);
+
+
 
 // Usa el enrutador
 app.use(router);
 // Monta la aplicación con el enrutador
 app.mount('#app');
+
+// Usa el enrutador
+pag.use(router);
+// Monta la aplicación con el enrutador
+pag.mount('#pag');
 // Lógica del back-end
-
-// Agrega la función $agregarCarro como una propiedad global de Vue
-app.config.globalProperties.$agregarCarro = function () {
-  this.Carros.push({
-    nombre: this.NuevoCarro,
-    cantidad: 0
-  });
-};
-
-app.config.globalProperties.$agregarMoto = function () {
-  alert("Agregaste una moto con éxito!!");
-};
-
-app.config.globalProperties.$agregarNuevaFruta = function () {
-  this.frutass.push({
-    nombre: this.NuevaFruta,
-    cantidad: 0
-  });
-};
-
-app.config.globalProperties.$agregarCel = function () {
-  this.Celulares.push({
-    Marca: this.NuevoCelular,
-    Modelo: this.NuevoModelo,
-    Cantidad: this.NuevaCantidad
-  });
-};
 
 
 
