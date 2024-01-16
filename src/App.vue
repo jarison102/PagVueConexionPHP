@@ -1,38 +1,24 @@
 <template>
   <div>
     <div id="navbar">
-
-
-      <router-link to="/paginaP" target="_BLANK">
-        <button type="button" class="btn btn-success" >Registrarse Producto</button>
+      <router-link to="/paginaP">
+        <button type="button" class="btn btn-success">Registrarse Producto</button>
       </router-link>
-
-      <router-link to="/pagina" target="_BLANK">
+      <router-link to="/pagina">
         <button type="button" class="btn btn-success">Registrarse</button>
       </router-link>
-
     </div>
 
-
-    <!-- Agrega el componente PaginaRegistrar.vue aquí -->
-    <PaginaRegistrar></PaginaRegistrar>
-
-        <!-- Agrega el componente PaginaRegistrar.vue aquí -->
-        <PaginaRegistrarProducto></PaginaRegistrarProducto>
-
-    <!-- El componente actual se renderizará aquí -->
+    <!-- Asegúrate de que estás utilizando los componentes en tu plantilla -->
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-import PaginaRegistrar from './components/PaginaRegistrar.vue'; // Asegúrate de tener la ruta correcta
-import PaginaRegistrarProducto from './components/PaginaRegistrarProducto.vue';
 export default {
-  components: {
-    PaginaRegistrar,
-    PaginaRegistrarProducto,
-  },
+  // Mantén la importación de los componentes, pero no los utilices aquí.
+  // ...
+
 };
 </script>
 
